@@ -40,3 +40,12 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+pre code {
+  background-color: #1e1e1e; /* dark background */
+  color: #d4d4d4;           /* text */
+}
+
+code .k { color: #c586c0; } /* keywords */
+code .s { color: #ce9178; } /* strings */
+code .c { color: #6a9955; } /* comments */
