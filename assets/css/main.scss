@@ -41,6 +41,8 @@
     "vendor/font-awesome/brands"
 ;
 /* === Syntax highlighting that adapts to Light or Dark === */
+/* === Syntax highlighting with more readable comments === */
+
 pre,
 code {
   font-family: "Fira Code", "Source Code Pro", monospace;
@@ -59,7 +61,7 @@ code {
   border-radius: 4px;
 }
 
-/* ----- Dark mode (VS Code Dark+) ----- */
+/* ----- Dark mode (VS Code Dark+ with brighter comments) ----- */
 @media (prefers-color-scheme: dark) {
   pre { background: #1e1e1e; }
   code { background: #252526; color: #d4d4d4; }
@@ -70,11 +72,17 @@ code {
   code .nf { color: #dcdcaa; } /* functions */
   code .n, code .nv { color: #9cdcfe; } /* variables */
   code .nc, code .kt { color: #4ec9b0; font-weight: 500; } /* classes/types */
-  code .c, code .cm, code .c1 { color: #6a9955; font-style: italic; } /* comments */
+
+  /* brighter comments */
+  code .c, code .cm, code .c1 {
+    color: #9cdc8c;  /* lighter green */
+    font-style: italic;
+  }
+
   code .o { color: #d4d4d4; } /* operators */
 }
 
-/* ----- Light mode (GitHub style) ----- */
+/* ----- Light mode (GitHub style with darker comments) ----- */
 @media (prefers-color-scheme: light) {
   pre { background: #f6f8fa; }
   code { background: #f6f8fa; color: #24292e; }
@@ -85,6 +93,12 @@ code {
   code .nf { color: #6f42c1; } /* functions */
   code .n, code .nv { color: #24292e; } /* variables */
   code .nc, code .kt { color: #005cc5; font-weight: 500; } /* classes/types */
-  code .c, code .cm, code .c1 { color: #6a737d; font-style: italic; } /* comments */
+
+  /* darker but still readable comments */
+  code .c, code .cm, code .c1 {
+    color: #22863a;  /* richer green instead of grey */
+    font-style: italic;
+  }
+
   code .o { color: #24292e; } /* operators */
 }
